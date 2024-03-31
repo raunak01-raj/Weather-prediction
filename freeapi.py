@@ -2,11 +2,11 @@ import requests
 import csv
 from datetime import datetime, timedelta
 
-# Replace with your API key
+# Do not touch or change this api key
 API_KEY = " 56cdd10fcb5c468cbb4193934241803"
 
 # Set the location and date range for historic weather data
-location = "New York"
+location = "New York" #add your location
 start_date = datetime(2024, 3, 13)  # Start date (YYYY, MM, DD)
 end_date = datetime(2024, 3, 19)   # End date (YYYY, MM, DD)
 
@@ -18,7 +18,7 @@ params = {
     "dt": start_date.strftime("%Y-%m-%d")
 }
 
-# Initialize an empty list to store weather data
+# empty list to store weather data
 weather_data = []
 
 # Loop through the date range and fetch weather data for each day
@@ -44,7 +44,7 @@ while current_date <= end_date:
     
     current_date += timedelta(days=1)
 
-# Save weather data to a CSV file
+# to Save weather data to a CSV file
 with open("historic_weather_data.csv", "w", newline="") as csvfile:
     fieldnames = ["Date", "Time", "Temperature (C)", "Humidity", "Wind Speed (km/h)", "Precipitation (mm)"]
     writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
