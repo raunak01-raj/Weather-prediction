@@ -1,6 +1,10 @@
 telepot
+python-telegram-bot==13.7
 python-dotenv
+requests
+telebot
 
 
 # run the command in terminal
+# cd telegram_bot
 # pip install -r requirements.txt
