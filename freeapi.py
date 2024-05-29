@@ -6,9 +6,9 @@ from datetime import datetime, timedelta
 API_KEY = " 56cdd10fcb5c468cbb4193934241803"
 
 # Set the location and date range for historic weather data
-location = "New York" #add your location
-start_date = datetime(2024, 3, 1)  # Start date (YYYY, MM, DD)
-end_date = datetime(2024, 4, 1)   # End date (YYYY, MM, DD)
+location = "Patna" #add your location
+start_date = datetime(2024, 5, 15)  # Start date (YYYY, MM, DD)
+end_date = datetime(2024, 5, 29)   # End date (YYYY, MM, DD)
 
 # Set the base URL and parameters for the API request
 base_url = "http://api.weatherapi.com/v1/history.json"
