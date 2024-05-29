@@ -6,8 +6,13 @@ from datetime import datetime, timedelta
 API_KEY = " 56cdd10fcb5c468cbb4193934241803"
 
 # Set the location and date range for historic weather data
+<<<<<<< HEAD
 location = "Patna" #add your location
 start_date = datetime(2024, 5, 15)  # Start date (YYYY, MM, DD)
+=======
+location = "Mumbai" #add your location
+start_date = datetime(2024, 5, 28)  # Start date (YYYY, MM, DD)
+>>>>>>> dc8a439f6fe5765c81477fcdd2645e1681cca1a4
 end_date = datetime(2024, 5, 29)   # End date (YYYY, MM, DD)
 
 # Set the base URL and parameters for the API request
