@@ -17,7 +17,6 @@ def predict():
     humidity = request.form.get('humidity')
     air_quality_Nitrogen_dioxide = request.form.get('air_quality_Nitrogen_dioxide')
 
-    # Convert retrieved values to floats (assuming they are numerical)
     try:
         wind_kph = float(wind_kph)
         pressure_in = float(pressure_in)
@@ -28,13 +27,10 @@ def predict():
         # Handle potential conversion errors (e.g., user entering non-numeric data)
         return render_template("index(ml).html", error="Invalid form data")
 
-    # Now you have individual float values for prediction
-    prediction = model.predict([[wind_kph, pressure_in, precip_mm, humidity, air_quality_Nitrogen_dioxide]])
+    prediction = model.predict([[wind_kph, pressure_in, precip_mm, humidity, air_quality_Nitrogen_dioxide ]])
     output = round(prediction[0], 2)
     return render_template("index(ml).html" , prediction_text=f'Temperature predicted in degree C is {output} ')
 
-    # .py -> html
-    #return render_template("submit.html", n =name)
 
 if __name__ == "__main__":
     app.run(debug=True)
