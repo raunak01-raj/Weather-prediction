@@ -6,6 +6,7 @@ const searchBox = document.querySelector(".search input");
 const searchBtn = document.querySelector(".search button");
 const weatherIcon = document.querySelector(".weather-icon");
 
+
 async function checkweather(city){
      const response = await fetch(apiurl +  city + `&appid=${apikey}`);
 
@@ -41,7 +42,9 @@ else if(data.weather[0].main == "Mist"){
 document.querySelector(".weather").style.display ="block";
 document.querySelector(".error").style.display = "none"; 
 
-    }
+
+
+       }
 
    
 
