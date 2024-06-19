@@ -6,6 +6,15 @@
     <title>Temperature Prediction Form</title>
 </head>
 <body>
+    <label for="dropdownMenu">Choose an option:</label>
+    <select name="dropdownMenu" id="dropdownMenu">
+      <option value="option1">Option 1</option>
+      <option value="option2">Option 2</option>
+      <option value="option3">Option 3</option>
+    </select>
+    
+
+
     <h1>Temperature Prediction</h1>
     <p>Enter the following weather factors to predict temperature:</p>
     <form action= "{{url_for('predict')}}" method = 'post'>
@@ -27,6 +36,9 @@
         <button type="submit">Predict Temperature</button>
     </form>
     <br>
+
+
+    
     <h3>{{prediction_text}}</h3>
 </body>
 </html>

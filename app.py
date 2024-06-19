@@ -10,6 +10,8 @@ def hello():
     return render_template("index(ml).html")
 
 @app.route("/predict", methods = ['GET','POST'])
+
+
 def predict():
     wind_kph = request.form.get('wind_kph')
     pressure_in = request.form.get('pressure_in')
