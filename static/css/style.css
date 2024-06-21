@@ -1,0 +1,59 @@
+body {
+    background-image: url('../images/download.jpg');
+    background-size: cover; /* Ensures the image covers the entire background */
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+    font-family: Arial, sans-serif; /* Optional: Set your preferred font */
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 700px;
+    height: 550px;
+    border-radius: 5px;
+    border: 10px solid rgba(255,255,255,.2);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.imgBx
+{
+    width: 350px;
+    height: 550px;
+    overflow: hidden;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.imgBx img
+{
+    width: 500px;
+    height: 550px;
+
+}
+
+.pred_form
+{
+    float: right;
+    width: 350px;
+    height: 550px;
+    box-sizing: border-box;
+    padding: 5px 40px;
+    background: rgba(255,255,255,.8);
+
+}
+
+
+.link{
+    position: absolute;
+    top: 85%;
+    left: 40%;
+    font-size: large;
+    color: hsl(191, 90%, 48%);
+
+  }
