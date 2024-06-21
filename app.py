@@ -15,18 +15,13 @@ prophet_model = pickle.load(open('prophet.pkl', 'rb'))
 def hello():
     return render_template("index(ml).html")
 
-<<<<<<< HEAD
 @app.route("/first", methods = ['GET','POST'])
 def first():
-=======
+
 @app.route("/predict", methods = ['GET','POST'])
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 500e6db0b4cc5b9c12a4f9a9ec275135094deff0
 def predict():
->>>>>>> ff011ae75bd4fa9cc9a10261d7bc6c4d6a1c2d10
     wind_kph = request.form.get('wind_kph')
     pressure_in = request.form.get('pressure_in')
     precip_mm = request.form.get('precip_mm')
