@@ -1,0 +1,36 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Prediction Form</title>
+</head>
+<body>
+    <h1>Temperature Prediction</h1>
+    <p>Enter the following weather factors to predict temperature:</p>
+    <form action= "{{url_for('predict')}}" method = 'post'>
+        <label for="wind_kph">Wind Speed (km/h):</label>
+        <input type="number" id="wind_kph" name="wind_kph" placeholder="Enter Wind Speed (km/h)" required step="0.001"><br><br>
+        
+        <label for="pressure_in">Pressure (in):</label>
+        <input type="number" id="pressure_in" name="pressure_in" required step="0.001"><br><br>
+        
+        <label for="precip_mm">Precipitation (mm):</label>
+        <input type="number" id="precip_mm" name="precip_mm" required step="0.001"><br><br>
+        
+        <label for="humidity">Humidity (%):</label>
+        <input type="number" id="humidity" name="humidity" required step="0.001"><br><br>
+        
+        <label for="air_quality_Nitrogen_dioxide">Air Quality (Nitrogen Dioxide):</label>
+        <input type="number" id="air_quality_Nitrogen_dioxide" name="air_quality_Nitrogen_dioxide" required step="0.001"><br><br>
+        
+        <button type="submit">Predict Temperature</button>
+    </form>
+    <br>
+    <h3>{{prediction_text}}</h3>
+</body>
+</html>
+
+</body>
+
+</html>

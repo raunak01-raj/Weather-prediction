@@ -2,13 +2,13 @@ import requests
 import csv
 from datetime import datetime, timedelta
 
-# Do not touch or change this api key
+# Replace with your API key
 API_KEY = " 56cdd10fcb5c468cbb4193934241803"
 
 # Set the location and date range for historic weather data
-location = "Mumbai" #add your location
-start_date = datetime(2024, 5, 28)  # Start date (YYYY, MM, DD)
-end_date = datetime(2024, 5, 29)   # End date (YYYY, MM, DD)
+location = "New York"
+start_date = datetime(2024, 3, 13)  # Start date (YYYY, MM, DD)
+end_date = datetime(2024, 3, 19)   # End date (YYYY, MM, DD)
 
 # Set the base URL and parameters for the API request
 base_url = "http://api.weatherapi.com/v1/history.json"
@@ -18,7 +18,7 @@ params = {
     "dt": start_date.strftime("%Y-%m-%d")
 }
 
-# empty list to store weather data
+# Initialize an empty list to store weather data
 weather_data = []
 
 # Loop through the date range and fetch weather data for each day
@@ -44,7 +44,7 @@ while current_date <= end_date:
     
     current_date += timedelta(days=1)
 
-# to Save weather data to a CSV file
+# Save weather data to a CSV file
 with open("historic_weather_data.csv", "w", newline="") as csvfile:
     fieldnames = ["Date", "Time", "Temperature (C)", "Humidity", "Wind Speed (km/h)", "Precipitation (mm)"]
     writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
