@@ -75,13 +75,6 @@ def forecast(update: Update, context: CallbackContext) -> None:
     except Exception as e:
         update.message.reply_text(f'Sorry, something went wrong: {str(e)}')
 
-# Example usage (not part of the function)
-# Replace with actual Update and CallbackContext objects when running in a bot environment
-# update = Update
-# context = CallbackContext
-# forecast(update, context)
-
-
 def news(update: Update, context: CallbackContext) -> None:
     try:
         # Initialize NewsApiClient with your API key
