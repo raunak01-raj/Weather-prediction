@@ -14,14 +14,8 @@ prophet_model = pickle.load(open('prophet.pkl', 'rb'))
 @app.route("/")
 def hello():
     return render_template("index(ml).html")
-
 @app.route("/first", methods = ['GET','POST'])
 def first():
-
-@app.route("/predict", methods = ['GET','POST'])
-
-
-def predict():
     wind_kph = request.form.get('wind_kph')
     pressure_in = request.form.get('pressure_in')
     precip_mm = request.form.get('precip_mm')
@@ -51,7 +45,6 @@ def predict():
 @app.route("/second", methods=['GET', 'POST'])
 def second():
     if request.method == 'POST':
-        location = request.form.get('city')
         date_time = request.form.get('datetime')
         try:
             date_time = datetime.strptime(date_time, "%Y-%m-%dT%H:%M")
