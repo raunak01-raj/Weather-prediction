@@ -46,6 +46,21 @@ def weather(update: Update, context: CallbackContext) -> None:
         update.message.reply_text('Sorry, something went wrong.')
 
 def forecast(update: Update, context: CallbackContext) -> None:
+    """
+    Retrieves the 3-hour forecast for a given city and sends it as a reply to the user.
+
+    Args:
+        update (telegram.Update): The update object containing the message.
+        context (telegram.ext.CallbackContext): The context object containing the bot instance.
+
+    Returns:
+        None: This function does not return anything.
+
+    Raises:
+        pyowm.commons.exceptions.NotFoundError: If the city is not found.
+        Exception: If an error occurs while retrieving the forecast.
+
+    """
     city = ' '.join(context.args)
     if not city:
         update.message.reply_text('Please provide a city name')
@@ -60,12 +75,12 @@ def forecast(update: Update, context: CallbackContext) -> None:
 
         # Get the next 5 forecasts
         forecasts = forecast.forecast
-        reply_text = f'3-Hour Forecast for {city}:\n'
+        reply_text = f'3-Hour Forecast for {city}:\n' if forecasts else 'No forecast available\n'
 
         for weather in forecasts:
             time = weather.reference_time('iso')[11:16]
-            description = weather.detailed_status.capitalize()
-            temperature = weather.temperature('celsius')['temp']
+            description = weather.detailed_status.capitalize() if weather.detailed_status else 'No description available'
+            temperature = weather.temperature('celsius')['temp'] if weather.temperature('celsius') else 'No temperature available'
             reply_text += f'{time}: {description}, {temperature}°C\n'
 
         update.message.reply_text(reply_text)
