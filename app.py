@@ -60,7 +60,7 @@ def second():
         one_day_forecast = prophet_model.predict(prediction_date)
         predicted_temp = one_day_forecast["yhat"].values[0]
 
-        return render_template("index(fb).html", pred_text=f'Temperature predicted in degree C is {predicted_temp:.2f}')
+        return render_template("index(fb).html", pred_text=f"Patna's Temperature predicted in degree C is {predicted_temp:.2f}")
     return render_template("index(fb).html")
 
 

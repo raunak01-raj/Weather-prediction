@@ -47,13 +47,10 @@ body {
     background: rgba(255,255,255,.8);
 
 }
-
-
 .link{
     position: absolute;
-    top: 85%;
+    top: 90%;
     left: 40%;
-    font-size: large;
-    color: hsl(191, 90%, 48%);
-
-  }
+    color: beige;
+    
+}
