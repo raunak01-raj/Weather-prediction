@@ -71,16 +71,16 @@ def forecast(update: Update, context: CallbackContext) -> None:
         owm = pyowm.OWM(OWM_API_KEY)
 
         # Search for weather forecast in the specified city
-        forecast = owm.weather_manager().forecast_at_place(city, '3h')
+        forecast = owm.three_hours_forecast(city)
 
         # Get the next 5 forecasts
-        forecasts = forecast.forecast
+        forecasts = forecast.forecast.to_be_formatted('%d%H%i')[:5]
         reply_text = f'3-Hour Forecast for {city}:\n' if forecasts else 'No forecast available\n'
 
         for weather in forecasts:
-            time = weather.reference_time('iso')[11:16]
-            description = weather.detailed_status.capitalize() if weather.detailed_status else 'No description available'
-            temperature = weather.temperature('celsius')['temp'] if weather.temperature('celsius') else 'No temperature available'
+            time = weather['start_time'].strftime('%H:%M')
+            description = weather['weather'].get('detailed_status', 'No description available').capitalize()
+            temperature = weather['temperature'].get('temp', 'No temperature available')
             reply_text += f'{time}: {description}, {temperature}°C\n'
 
         update.message.reply_text(reply_text)
