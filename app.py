@@ -64,9 +64,9 @@ def second():
     return render_template("index(fb).html")
 
 
-
-if __name__ == '__main__':
-    app.run(debug=True)
+# for running local server uncomment below 2 lines
+#if __name__ == '__main__':
+#    app.run(debug=True)
 
 
 
