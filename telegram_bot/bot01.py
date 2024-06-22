@@ -57,8 +57,9 @@ def forecast(update: Update, context: CallbackContext) -> None:
         None: This function does not return anything.
 
     Raises:
+        pyowm.exceptions.APIResponseError: If the API response is invalid or empty.
+        pyowm.exceptions.APICallError: If the API call fails.
         pyowm.commons.exceptions.NotFoundError: If the city is not found.
-        Exception: If an error occurs while retrieving the forecast.
 
     """
     city = ' '.join(context.args)
@@ -85,10 +86,14 @@ def forecast(update: Update, context: CallbackContext) -> None:
 
         update.message.reply_text(reply_text)
 
+    except pyowm.exceptions.APIResponseError as e:
+        update.message.reply_text(f'Invalid API response: {str(e)}')
+    except pyowm.exceptions.APICallError as e:
+        update.message.reply_text(f'API call failed: {str(e)}')
     except pyowm.commons.exceptions.NotFoundError:
         update.message.reply_text('City not found. Please enter a valid city name.')
     except Exception as e:
-        update.message.reply_text(f'Sorry, something went wrong: {str(e)}')
+        update.message.reply_text(f'An error occurred: {str(e)}')
 
 def news(update: Update, context: CallbackContext) -> None:
     try:
