@@ -1,9 +1,11 @@
 telepot
-python-telegram-bot==13.7
+python-telegram-bot==13.*
 python-dotenv
 requests
 telebot
-
+pyTelegramBotAPI
+pyowm
+newsapi-python
 
 # run the command in terminal
 # cd telegram_bot
