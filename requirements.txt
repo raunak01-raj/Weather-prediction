@@ -2,3 +2,5 @@ FLask
 Gunicorn
 pandas
 scikit-learn
+fbprophet
+pystan
