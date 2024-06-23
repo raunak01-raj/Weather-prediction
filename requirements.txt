@@ -1,4 +1,4 @@
 FLask
 Gunicorn
 pandas
-sklearn
+scikit-learn
