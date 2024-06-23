@@ -2,4 +2,3 @@ FLask
 Gunicorn
 pandas
 sklearn
---upgrade pip
