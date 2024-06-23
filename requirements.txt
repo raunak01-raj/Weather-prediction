@@ -2,7 +2,6 @@ FLask
 Gunicorn
 pandas
 scikit-learn
-app.py
 prophet
-fbprophet
 pystan
+pyproject.toml
