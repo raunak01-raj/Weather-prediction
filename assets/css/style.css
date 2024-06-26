@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 
 
 
@@ -1053,7 +1053,7 @@ article.container::before{
 @media (min-width:1400px){
 
 }
-=======
+
 
 
 
@@ -1275,7 +1275,7 @@ body{
   display: grid;
   place-items: center;
   border-radius: var(--radius-circle);
-
+  
 
 }
 
@@ -1874,7 +1874,7 @@ article.container::before{
 
   .header .btn-primary .span  {display: block;}
 
-  .search-view { clip-path: circle(3% at calc(100%-273px)6%;);}
+  .search-view { clip-path: circle(3% at calc(100%-273px)6%)}
 
   /**
   *main
@@ -2086,4 +2086,4 @@ article.container::before{
 @media (min-width:1400px){
 
 }
->>>>>>> 500e6db0b4cc5b9c12a4f9a9ec275135094deff0
+
