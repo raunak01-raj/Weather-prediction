@@ -1534,7 +1534,7 @@ article.container:is(:hover, :focus-within)::-webkit-scrollbar-thumb{
   background-color:var(--white-alpha-8);
 }
 
-article.container::-webkit-scrollbar-button{height: 10px;}
+article.container::-webkit-scrollbar-button{height: 10px;} 
 
 article.container::before{
   content: "";
@@ -1827,8 +1827,181 @@ article.container::before{
 
 
 
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 1em;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a.active, nav ul li a:hover {
+  color: #FFD700;
+}
 
 
+
+.about-section {
+  text-align: center;
+}
+
+.about-section h1 {
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+
+.about-section p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin-bottom: 1em;
+}
+
+.contact-section {
+  text-align: center;
+}
+
+.contact-section h1 {
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+
+.contact-section form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-section label {
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
+}
+
+.contact-section input, .contact-section textarea {
+  width: 100%;
+  max-width: 500px;
+  padding: 0.5em;
+  margin-bottom: 1em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.contact-section button {
+  padding: 0.7em 1.5em;
+  font-size: 1em;
+  color: white;
+  background-color: #333;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact-section button:hover {
+  background-color: #FFD700;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+}
+
+.profile-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: 0.5em;
+}
+
+.signup-button {
+  background-color: #FFD700;
+  color: black;
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.signup-button:hover {
+  background-color: #FFA500;
+}
+
+
+.signup-section {
+  text-align: center;
+}
+
+.signup-section h1 {
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+
+.signup-section form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signup-section label {
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
+}
+
+.signup-section input {
+  width: 100%;
+  max-width: 500px;
+  padding: 0.5em;
+  margin-bottom: 1em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.signup-section button {
+  padding: 0.7em 1.5em;
+  font-size: 1em;
+  color: white;
+  background-color: #333;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.signup-section button:hover {
+  background-color: #FFD700;
+}
+
+.footer,
+.footer .body-3:last-child{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+
+footer {
+  background-color: #333;
+  color: var(--on-surface-variant);
+  text-align: center;
+  padding: 1em 0;
+  
+  bottom: 0;
+  width: 100%;
+  gap:12px 24px;
+  margin-block-start: 28px;
+  display: none;
+
+}
+
+.fade-in .footer{ display: flex;}
+.footer .body-3last-child{ gap: 6px;}
 /*-----------------------------------*\
   #FOOTER
 \*-----------------------------------*/
@@ -1953,7 +2126,7 @@ article.container::before{
   }
 
   /**
-  *resused style
+  /* *resused style
   */
 
   .container {padding: 40px;}
@@ -2043,7 +2216,7 @@ article.container::before{
 
   .search-view:is(:focus-within, :has(.view-list):focus-within) {
     filter: drop-shadow(var(--shadow-2));
-  }
+  } 
 
   /**
   *main
